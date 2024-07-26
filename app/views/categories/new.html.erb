@@ -1,0 +1,31 @@
+selector that users can choose either category or cards
+probably javascript needed
+
+add "data-controller"
+<div>
+  <div class="d-flex justify-content-center">
+    <div class="btn-group" role="group" aria-label="Category or Cards">
+      <input type="radio" class="btn-check" name="btnradio" id="category" autocomplete="off" checked>
+      data-category-target=editType or add data-action to change values
+      <label class="btn btn-outline-primary" for="category">Category</label>
+      data-category-target=editType or add data-action to change values
+      <input type="radio" class="btn-check" name="btnradio" id="cards" autocomplete="off">
+      <label class="btn btn-outline-primary" for="cards">cards</label>
+    </div>
+  </div>
+  <div>
+    <%= render "form", category: @category %>
+  </div>
+</div>
+
+
+if category is selected
+create a function to show category or cards
+data-category-target=~~
+
+else render another form
+
+<br>
+
+if cards are selected
+show cards(render)

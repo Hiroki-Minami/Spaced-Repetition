@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  card: one
+  study_category: one
+  understanding_level: 1.5
+  is_archived: false
+
+two:
+  card: two
+  study_category: two
+  understanding_level: 1.5
+  is_archived: false
