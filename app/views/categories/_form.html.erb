@@ -34,7 +34,12 @@
       <%= form.submit class:'btn btn-primary' %>
     </div>
     <div class="mb-4">
-      <%= form.submit @category.new_record? ? 'Create and Set Cards': 'Update and Set Cards', class:'btn btn-primary' %>
+      <% if @category.new_record? %>
+        <%= form.submit 'Create and Set Cards', class:'btn btn-primary' %>
+      <% else %>
+        <%= link_to "Set Cards", category_cards_path(@category), class:'btn btn-primary' %>
+        <%# <%= form.submit @category.new_record? ? 'Create and Add Cards': 'Update and Add Cards', class:'btn btn-primary' %>
+      <% end %>
     </div>
   </div>
 <% end %>
